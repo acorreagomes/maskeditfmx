@@ -14,8 +14,9 @@ type
     procedure SetMaskType(const Value: TMaskType);
     procedure EditKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     function ExecutaMascara(Value: string): string;
+    procedure SettingsMaskType;
   protected
-    procedure Typing(Sender: TObject);
+    procedure EditTyping(Sender: TObject);
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
@@ -34,7 +35,7 @@ end;
 
 { TMaskEditFMX }
 
-procedure TMaskEditFMX.Typing(Sender: TObject);
+procedure TMaskEditFMX.EditTyping(Sender: TObject);
 begin
   if not(BackspaceDeleteKey) then
   begin
@@ -56,9 +57,10 @@ begin
   case MaskType of
     mtCPF : Result := TMascaras.CPF(Value);
     mtCNPJ: Result := TMascaras.CNPJ(Value);
-    mtDate: Result := TMascaras.Data(Value);
     mtTelefone: Result := TMascaras.Telefone(Value);
     mtCelular: Result := TMascaras.Celular(Value);
+    mtDate: Result := TMascaras.Data(Value);
+    mtCEP: Result := TMascaras.CEP(Value);
   else
     Result := Value;
   end;
@@ -70,7 +72,7 @@ begin
   KeyboardType := TVirtualKeyboardType.PhonePad;
   TextSettings.HorzAlign := TTextAlign.Center;
   FilterChar := '0123456789./-()';
-  OnTyping := Typing;
+  OnTyping := EditTyping;
   OnKeyDown := EditKeyDown;
 end;
 
@@ -88,6 +90,11 @@ end;
 procedure TMaskEditFMX.SetMaskType(const Value: TMaskType);
 begin
   FMaskType := Value;
+  SettingsMaskType;
+end;
+
+procedure TMaskEditFMX.SettingsMaskType;
+begin
   case FMaskType of
     mtCPF:
       begin
@@ -113,6 +120,11 @@ begin
       begin
         TextPrompt := '__/__/____';
         MaxLength := 10;
+      end;
+    mtCEP:
+      begin
+        TextPrompt := '_____-___';
+        MaxLength := 9;
       end;
   end;
 end;

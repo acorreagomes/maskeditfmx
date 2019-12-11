@@ -28,7 +28,8 @@ package MaskEditFMX;
 {$IMPLICITBUILD ON}
 
 requires
-  rtl;
+  rtl,
+  fmx;
 
 contains
   Providers.Dialogs.Factory in '..\providers\Providers.Dialogs.Factory.pas',
@@ -38,6 +39,8 @@ contains
   Providers.Mascara.Data in '..\providers\Providers.Mascara.Data.pas',
   Providers.Mascara.Telefone in '..\providers\Providers.Mascara.Telefone.pas',
   Providers.Mascaras.Intf in '..\providers\Providers.Mascaras.Intf.pas',
-  Providers.Mascaras.Types in '..\providers\Providers.Mascaras.Types.pas';
+  Providers.Mascaras.Types in '..\providers\Providers.Mascaras.Types.pas',
+  MaskEditFMX.Main in 'MaskEditFMX.Main.pas',
+  Providers.Mascara.CEP in '..\providers\Providers.Mascara.CEP.pas';
 
 end.
