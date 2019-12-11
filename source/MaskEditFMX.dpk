@@ -1,0 +1,43 @@
+package MaskEditFMX;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl;
+
+contains
+  Providers.Dialogs.Factory in '..\providers\Providers.Dialogs.Factory.pas',
+  Providers.Mascara.Celular in '..\providers\Providers.Mascara.Celular.pas',
+  Providers.Mascara.CNPJ in '..\providers\Providers.Mascara.CNPJ.pas',
+  Providers.Mascara.CPF in '..\providers\Providers.Mascara.CPF.pas',
+  Providers.Mascara.Data in '..\providers\Providers.Mascara.Data.pas',
+  Providers.Mascara.Telefone in '..\providers\Providers.Mascara.Telefone.pas',
+  Providers.Mascaras.Intf in '..\providers\Providers.Mascaras.Intf.pas',
+  Providers.Mascaras.Types in '..\providers\Providers.Mascaras.Types.pas';
+
+end.

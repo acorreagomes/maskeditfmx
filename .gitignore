@@ -1,0 +1,15 @@
+*.png
+*.fdb
+*.dll
+*.exe
+*.so
+*.dcu
+*.xml
+*.dex
+*.o
+*.apk
+*.identcache
+*.res
+*.stat
+__history
+__recovery

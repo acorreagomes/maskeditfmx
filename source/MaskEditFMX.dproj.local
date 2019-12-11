@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/12/10 22:53:59.747,=rtl.dcp</Transaction>
+    <Transaction>2019/12/10 22:57:16.454,C:\git\components\maskeditfmx\source\MaskEditFMX.dproj=C:\Users\Leticia\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2019/12/10 22:59:13.917,=C:\git\components\maskeditfmx\providers\Providers.Dialogs.Factory.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.925,=C:\git\components\maskeditfmx\providers\Providers.Mascara.Celular.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.932,=C:\git\components\maskeditfmx\providers\Providers.Mascara.CNPJ.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.940,=C:\git\components\maskeditfmx\providers\Providers.Mascara.CPF.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.947,=C:\git\components\maskeditfmx\providers\Providers.Mascara.Data.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.954,=C:\git\components\maskeditfmx\providers\Providers.Mascara.Telefone.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.963,=C:\git\components\maskeditfmx\providers\Providers.Mascaras.Intf.pas</Transaction>
+    <Transaction>2019/12/10 22:59:13.974,=C:\git\components\maskeditfmx\providers\Providers.Mascaras.Types.pas</Transaction>
+  </Transactions>
+</BorlandProject>
