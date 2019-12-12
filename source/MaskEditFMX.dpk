@@ -32,7 +32,7 @@ requires
   fmx;
 
 contains
-  Providers.Dialogs.Factory in '..\providers\Providers.Dialogs.Factory.pas',
+  Providers.Mascaras.Factory in '..\providers\Providers.Mascaras.Factory.pas',
   Providers.Mascara.Celular in '..\providers\Providers.Mascara.Celular.pas',
   Providers.Mascara.CNPJ in '..\providers\Providers.Mascara.CNPJ.pas',
   Providers.Mascara.CPF in '..\providers\Providers.Mascara.CPF.pas',

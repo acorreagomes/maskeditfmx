@@ -3,4 +3,7 @@
 	<Transactions>
     <Transaction>2019/12/10 22:57:16.000.454,C:\Users\Leticia\Documents\Embarcadero\Studio\Projects\Package1.dproj=C:\git\components\maskeditfmx\source\MaskEditFMX.dproj</Transaction>
   </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="52006ed0c08b85ef"/>
+	</ActiveMobileDevice>
 </BorlandProject>

@@ -4,13 +4,16 @@ interface
 
 uses
   System.SysUtils, System.Classes, FMX.Types, FMX.Controls,
-  FMX.Controls.Presentation, FMX.Edit, Providers.Mascaras.Types, Providers.Dialogs.Factory;
+  FMX.Controls.Presentation, FMX.Edit, Providers.Mascaras.Types,
+  Providers.Mascaras.Factory, System.UITypes;
 
 type
-  TMaskEditFMX = class(TEdit)
+  TMaskEditFMX = class(TCustomEdit)
   private
     FMaskType: TMaskType;
     BackspaceDeleteKey: Boolean;
+  const
+    FilterCharDefault = '0123456789';
     procedure SetMaskType(const Value: TMaskType);
     procedure EditKeyDown(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
     function ExecutaMascara(Value: string): string;
@@ -21,6 +24,80 @@ type
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
   published
+    property ControlType;
+    property OnPresentationNameChoosing;
+    { inherited }
+    property Cursor default crIBeam;
+    property CanFocus default True;
+    property CanParentFocus;
+    property DisableFocusEffect;
+    property ReturnKeyType;
+    property ReadOnly;
+    property Text;
+    property TextSettings;
+    property ImeMode;
+    property Position;
+    property Width;
+    property Height;
+    property ClipChildren default False;
+    property ClipParent default False;
+    property DragMode default TDragMode.dmManual;
+    property EnableDragHighlight default True;
+    property Enabled default True;
+    property Locked default False;
+    property Hint;
+    property HitTest default True;
+    property HelpContext;
+    property HelpKeyword;
+    property HelpType;
+    property Padding;
+    property Opacity;
+    property Margins;
+    property PopupMenu;
+    property RotationAngle;
+    property RotationCenter;
+    property Scale;
+    property Size;
+    property TextPrompt;
+    property StyleLookup;
+    property StyledSettings;
+    property TouchTargetExpansion;
+    property Visible default True;
+    property Caret;
+    property KillFocusByReturn;
+    property CheckSpelling;
+    property ParentShowHint;
+    property ShowHint;
+    property CharCase default TCustomEditModel.DefaultCharCase;
+    { events }
+    property OnChange;
+    property OnChangeTracking;
+    property OnApplyStyleLookup;
+    property OnValidating;
+    property OnValidate;
+    property OnDragEnter;
+    property OnDragLeave;
+    property OnDragOver;
+    property OnDragDrop;
+    property OnDragEnd;
+    property OnKeyDown;
+    property OnKeyUp;
+    property OnCanFocus;
+    property OnClick;
+    property OnDblClick;
+    property OnEnter;
+    property OnExit;
+    property OnMouseDown;
+    property OnMouseMove;
+    property OnMouseUp;
+    property OnMouseWheel;
+    property OnMouseEnter;
+    property OnMouseLeave;
+    property OnPainting;
+    property OnPaint;
+    property OnResize;
+    property OnResized;
+
     property MaskType: TMaskType read FMaskType write SetMaskType;
   end;
 
@@ -71,7 +148,6 @@ begin
   inherited Create(AOwner);
   KeyboardType := TVirtualKeyboardType.PhonePad;
   TextSettings.HorzAlign := TTextAlign.Center;
-  FilterChar := '0123456789./-()';
   OnTyping := EditTyping;
   OnKeyDown := EditKeyDown;
 end;
@@ -98,32 +174,32 @@ begin
   case FMaskType of
     mtCPF:
       begin
-        TextPrompt := '___.___.___-__';
+        FilterChar := FilterCharDefault + '.-';
         MaxLength := 14;
       end;
     mtCNPJ:
       begin
-        TextPrompt := '__.___.___/____-__';
+        FilterChar := FilterCharDefault + './-';
         MaxLength := 18;
       end;
     mtTelefone:
       begin
-        TextPrompt := '(__)-____-____';
+        FilterChar := FilterCharDefault + '()-';
         MaxLength := 13;
       end;
     mtCelular:
       begin
-        TextPrompt := '(__)-_____-____';
+        FilterChar := FilterCharDefault + '()-';
         MaxLength := 14;
       end;
     mtDate:
       begin
-        TextPrompt := '__/__/____';
+        FilterChar := FilterCharDefault + '/';
         MaxLength := 10;
       end;
     mtCEP:
       begin
-        TextPrompt := '_____-___';
+        FilterChar := FilterCharDefault + '-';
         MaxLength := 9;
       end;
   end;

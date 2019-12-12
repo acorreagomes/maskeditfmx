@@ -118,7 +118,7 @@
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="fmx.dcp"/>
-        <DCCReference Include="..\providers\Providers.Dialogs.Factory.pas"/>
+        <DCCReference Include="..\providers\Providers.Mascaras.Factory.pas"/>
         <DCCReference Include="..\providers\Providers.Mascara.Celular.pas"/>
         <DCCReference Include="..\providers\Providers.Mascara.CNPJ.pas"/>
         <DCCReference Include="..\providers\Providers.Mascara.CPF.pas"/>
