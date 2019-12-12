@@ -8,7 +8,7 @@ uses
   Providers.Mascaras.Factory, System.UITypes;
 
 type
-  TMaskEditFMX = class(TCustomEdit)
+  TMaskEditFMX = class(TEdit)
   private
     FMaskType: TMaskType;
     BackspaceDeleteKey: Boolean;
@@ -24,80 +24,6 @@ type
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
   published
-    property ControlType;
-    property OnPresentationNameChoosing;
-    { inherited }
-    property Cursor default crIBeam;
-    property CanFocus default True;
-    property CanParentFocus;
-    property DisableFocusEffect;
-    property ReturnKeyType;
-    property ReadOnly;
-    property Text;
-    property TextSettings;
-    property ImeMode;
-    property Position;
-    property Width;
-    property Height;
-    property ClipChildren default False;
-    property ClipParent default False;
-    property DragMode default TDragMode.dmManual;
-    property EnableDragHighlight default True;
-    property Enabled default True;
-    property Locked default False;
-    property Hint;
-    property HitTest default True;
-    property HelpContext;
-    property HelpKeyword;
-    property HelpType;
-    property Padding;
-    property Opacity;
-    property Margins;
-    property PopupMenu;
-    property RotationAngle;
-    property RotationCenter;
-    property Scale;
-    property Size;
-    property TextPrompt;
-    property StyleLookup;
-    property StyledSettings;
-    property TouchTargetExpansion;
-    property Visible default True;
-    property Caret;
-    property KillFocusByReturn;
-    property CheckSpelling;
-    property ParentShowHint;
-    property ShowHint;
-    property CharCase default TCustomEditModel.DefaultCharCase;
-    { events }
-    property OnChange;
-    property OnChangeTracking;
-    property OnApplyStyleLookup;
-    property OnValidating;
-    property OnValidate;
-    property OnDragEnter;
-    property OnDragLeave;
-    property OnDragOver;
-    property OnDragDrop;
-    property OnDragEnd;
-    property OnKeyDown;
-    property OnKeyUp;
-    property OnCanFocus;
-    property OnClick;
-    property OnDblClick;
-    property OnEnter;
-    property OnExit;
-    property OnMouseDown;
-    property OnMouseMove;
-    property OnMouseUp;
-    property OnMouseWheel;
-    property OnMouseEnter;
-    property OnMouseLeave;
-    property OnPainting;
-    property OnPaint;
-    property OnResize;
-    property OnResized;
-
     property MaskType: TMaskType read FMaskType write SetMaskType;
   end;
 

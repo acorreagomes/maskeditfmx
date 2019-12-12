@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2019/12/10 22:57:16.000.454,C:\Users\Leticia\Documents\Embarcadero\Studio\Projects\Package1.dproj=C:\git\components\maskeditfmx\source\MaskEditFMX.dproj</Transaction>
+    <Transaction>2019/12/10 22:57:16.000.454,C:\git\components\maskeditfmx\source\MaskEditFMX.dproj=C:\Users\Leticia\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
 		<NoProfile Android="52006ed0c08b85ef"/>
