@@ -58,12 +58,12 @@ end;
 function TMaskEditFMX.ExecutaMascara(Value: string): string;
 begin
   case MaskType of
-    mtCPF : Result := TMascaras.CPF(Value);
-    mtCNPJ: Result := TMascaras.CNPJ(Value);
-    mtTelefone: Result := TMascaras.Telefone(Value);
-    mtCelular: Result := TMascaras.Celular(Value);
-    mtDate: Result := TMascaras.Data(Value);
-    mtCEP: Result := TMascaras.CEP(Value);
+    mtCPF : Result := TMascaras.CPF.ExecMask(Value);
+    mtCNPJ: Result := TMascaras.CNPJ.ExecMask(Value);
+    mtTelefone: Result := TMascaras.Telefone.ExecMask(Value);
+    mtCelular: Result := TMascaras.Celular.ExecMask(Value);
+    mtDate: Result := TMascaras.Data.ExecMask(Value);
+    mtCEP: Result := TMascaras.CEP.ExecMask(Value);
   else
     Result := Value;
   end;

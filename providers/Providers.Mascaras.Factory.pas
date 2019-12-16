@@ -2,15 +2,18 @@ unit Providers.Mascaras.Factory;
 
 interface
 
+uses
+  Providers.Mascaras.Intf;
+
 type
   TMascaras = class
   public
-    class function CPF(Value: string): string;
-    class function CNPJ(Value: string): string;
-    class function Data(Value: string): string;
-    class function Telefone(Value: string): string;
-    class function Celular(Value: string): string;
-    class function CEP(Value: string): string;
+    class function CPF: IMascaras;
+    class function CNPJ: IMascaras;
+    class function Data: IMascaras;
+    class function Telefone: IMascaras;
+    class function Celular: IMascaras;
+    class function CEP: IMascaras;
   end;
 
 
@@ -21,34 +24,34 @@ implementation
 uses Providers.Mascara.CPF, Providers.Mascara.CNPJ, Providers.Mascara.Data,
   Providers.Mascara.Celular, Providers.Mascara.Telefone, Providers.Mascara.CEP;
 
-class function TMascaras.Celular(Value: string): string;
+class function TMascaras.Celular: IMascaras;
 begin
-  Result := TMascaraCelular.Create.ExecMask(value);
+  Result := TMascaraCelular.Create;
 end;
 
-class function TMascaras.CEP(Value: string): string;
+class function TMascaras.CEP: IMascaras;
 begin
-  Result := TMascaraCEP.Create.ExecMask(value);
+  Result := TMascaraCEP.Create;
 end;
 
-class function TMascaras.CNPJ(Value: string): string;
+class function TMascaras.CNPJ: IMascaras;
 begin
-  Result := TMascaraCNPJ.Create.ExecMask(value);
+  Result := TMascaraCNPJ.Create;
 end;
 
-class function TMascaras.CPF(Value: string): string;
+class function TMascaras.CPF: IMascaras;
 begin
-  Result := TMascaraCPF.Create.ExecMask(value);
+  Result := TMascaraCPF.Create;
 end;
 
-class function TMascaras.Data(Value: string): string;
+class function TMascaras.Data: IMascaras;
 begin
-  Result := TMascaraData.Create.ExecMask(value);
+  Result := TMascaraData.Create;
 end;
 
-class function TMascaras.Telefone(Value: string): string;
+class function TMascaras.Telefone: IMascaras;
 begin
-  Result := TMascaraTelefone.Create.ExecMask(value);
+  Result := TMascaraTelefone.Create;
 end;
 
 end.
