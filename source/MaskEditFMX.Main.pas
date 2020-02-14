@@ -64,6 +64,7 @@ begin
     mtCelular: Result := TMascaras.Celular.ExecMask(Value);
     mtDate: Result := TMascaras.Data.ExecMask(Value);
     mtCEP: Result := TMascaras.CEP.ExecMask(Value);
+    mtHora: Result := TMascaras.Hora.ExecMask(Value);
   else
     Result := Value;
   end;
@@ -127,6 +128,11 @@ begin
       begin
         FilterChar := FilterCharDefault + '-';
         MaxLength := 9;
+      end;
+    mtHora:
+      begin
+        FilterChar := FilterCharDefault + ':';
+        MaxLength := 5;
       end;
   end;
 end;

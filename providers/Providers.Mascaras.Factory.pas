@@ -14,6 +14,7 @@ type
     class function Telefone: IMascaras;
     class function Celular: IMascaras;
     class function CEP: IMascaras;
+    class function Hora: IMascaras;
   end;
 
 
@@ -22,7 +23,8 @@ implementation
 { TMascaras }
 
 uses Providers.Mascara.CPF, Providers.Mascara.CNPJ, Providers.Mascara.Data,
-  Providers.Mascara.Celular, Providers.Mascara.Telefone, Providers.Mascara.CEP;
+  Providers.Mascara.Celular, Providers.Mascara.Telefone, Providers.Mascara.CEP,
+  Providers.Mascara.Hora;
 
 class function TMascaras.Celular: IMascaras;
 begin
@@ -47,6 +49,11 @@ end;
 class function TMascaras.Data: IMascaras;
 begin
   Result := TMascaraData.Create;
+end;
+
+class function TMascaras.Hora: IMascaras;
+begin
+  Result := TMascaraHora.Create;
 end;
 
 class function TMascaras.Telefone: IMascaras;

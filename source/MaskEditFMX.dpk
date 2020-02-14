@@ -41,6 +41,7 @@ contains
   Providers.Mascaras.Intf in '..\providers\Providers.Mascaras.Intf.pas',
   Providers.Mascaras.Types in '..\providers\Providers.Mascaras.Types.pas',
   MaskEditFMX.Main in 'MaskEditFMX.Main.pas',
-  Providers.Mascara.CEP in '..\providers\Providers.Mascara.CEP.pas';
+  Providers.Mascara.CEP in '..\providers\Providers.Mascara.CEP.pas',
+  Providers.Mascara.Hora in '..\providers\Providers.Mascara.Hora.pas';
 
 end.
